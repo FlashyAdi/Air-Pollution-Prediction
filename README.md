@@ -1,7 +1,7 @@
 🌍 Air Pollution Prediction using AI/ML  
 
-This project aims to predict **air pollution levels** using Machine Learning techniques.  
-Currently, the repository contains **progress up to Week 2 (~60%)** including dataset preparation, preprocessing, and exploratory data analysis (EDA).  
+This project aims to predict **air pollution levels (AQI)** using Machine Learning techniques.  
+The repository contains week-wise progress (Weeks 1–4) including dataset preparation, preprocessing, EDA, model building, and final evaluation.
 
 ---
 
@@ -16,17 +16,17 @@ Air-Pollution-Prediction/
 
 ---
 
-🚀 Current Progress  
+🚀 Project Progress
 
-✅ Week 1  
+✅ Week 1
 - Dataset collected and uploaded (`city_day.csv`)  
 - Data successfully loaded in Google Colab  
 - Basic column cleaning and inspection  
-- Initial statistics (`describe`, missing values check)  
+- Initial statistics (`describe()`, missing values check)  
 
-✅ Week 2  
+✅ Week 2
 - Handled missing values (numeric columns filled with mean)  
-- Cleaned column names and parsed date column  
+- Cleaned column names and parsed `date` column  
 - Added feature engineering (`year`, `month`, `city_code`)  
 - Performed Exploratory Data Analysis (EDA):  
   - AQI distribution  
@@ -34,17 +34,41 @@ Air-Pollution-Prediction/
   - Correlation heatmap  
   - Top 10 most polluted cities by average AQI  
 
+✅ Week 3
+- Built baseline ML models:  
+  - Linear Regression  
+  - Decision Tree  
+- Evaluated with **R² Score** and **RMSE**  
+
+✅ Week 4 (Final)
+- Implemented advanced model: **Random Forest Regressor**  
+- Compared performance with baseline models  
+- Visualized feature importance  
+- Saved trained Random Forest model (`final_aqi_model.joblib`)  
+- Prepared final notebook combining preprocessing + EDA + modeling  
+
 ---
 
-📒 Usage  
+📒 Usage
 
-1. Open notebooks inside the `Notebooks/` folder (Week 1, Week 2, etc.)  
-2. Run them sequentially in Google Colab or Jupyter Notebook  
-3. Upload the dataset `city_day.csv` when prompted  
+1. Open any notebook from the `Notebooks/` folder in Google Colab.  
+2. Upload the dataset file (`city_day.csv`) when prompted.  
+3. Run all cells sequentially to reproduce results.  
+4. For complete workflow, use `Air_Pollution_Prediction_Final.ipynb`.  
 
 ---
 
-🚧 Next Steps  
+📊 Results
 
-- Week 3 → Implement baseline ML models (Linear Regression, Decision Tree, Random Forest)  
-- Week 4 → Evaluate performance with metrics (RMSE, R², etc.), finalize results, and improve README with findings
+- Linear Regression gave baseline predictions.  
+- Random Forest Regressor performed significantly better with higher R² and lower RMSE.  
+- Key contributing features: **PM2.5, PM10, NO2, SO2, CO**  
+- Identified top polluted cities and important temporal trends (`month`, `year`)  
+
+---
+
+🚧 Future Work
+
+- Try advanced deep learning models (**LSTM**, **GRU**) for time-series forecasting  
+- Deploy the model as a simple web app (**Streamlit/Flask**)  
+- Extend dataset with real-time air quality API integration
